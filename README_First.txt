@@ -2,7 +2,7 @@ This game made with java script By : Zainab Mostafa Hashem         in septemper 
 
 Note that :-
 
-1- to open the game click on "game" page icon first.
+1- to open the game click on "index" page icon first.
 
 2- sounds may not play on chrome browser .
    if sounds didn't work correctly open the game in another browser.
