@@ -1,0 +1,93 @@
+body,html
+		     {
+		     	height: 100%
+
+                   
+		     }
+		     p
+		     {
+		     	font-family: "myfont","tahoma";
+		     	font-size: 40px;
+
+		     }
+			.aimg
+			{
+				background-image: url( images/cover.jpg );
+				height: 100% ;
+				background-size: cover;
+			    background-position: center ;
+			    background-repeat: no-repeat;
+				position: relative;
+				
+
+
+			}
+			.bimg
+			{
+				background-image: url( images/win1.gif );
+				height: 100% ;
+				background-size: cover;
+			    background-position: center ;
+			    background-repeat: no-repeat;
+				position: relative;
+			}	
+			.atext
+			{
+				text-align: center;
+				position: absolute;
+				top: 70%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				font-family: "myfont","tahoma";
+				font-size: 50px;
+			
+			}
+			@font-face
+			{
+				font-family: myfont;
+				src:url(fonts/OEZwr2-ovBsq2n3ACCKoEjUe2wjZSDd4ua_dT9VBiU4.woff2);
+
+			}
+			.button
+			{
+				border-radius: 50%;
+				background-color: blue;
+				border:none;
+				color: white;
+				text-align: center;
+				font-size: 25px;
+				padding: 20px;
+				width: 200px;
+				transition: all 500;
+				cursor: pointer;
+				margin: 2px;
+
+			}
+			.button span
+			{
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition: 500;
+				font-family: "myfont","tahoma";
+
+			}
+			.button span:after
+			{
+				content: '\00bb';
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				right: -20px;
+				transition: 500;
+
+			}
+			.button:hover span
+			{
+				padding-right: 25px;
+			}
+			.button:hover span:after
+			{
+				opacity: 1;
+				right: 0;
+			}

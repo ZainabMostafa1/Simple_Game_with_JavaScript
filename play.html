@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>play</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+  <center><p id="p1" >
+    Focus carefully
+  </p>
+<br>
+ <p id="p2" ></p>
+  
+   <img  id="myimg" src="images/8.jpg" style="width: 350px;" ><br><br>
+   <img id="win" src="images/win.gif" style="display: none;">
+   <img id="lose" src="images/tryagain.gif" style="display: none;">
+    
+    <button id="b2" onclick="Fout();">Ready</button>
+    <br>
+    
+    <button id="b1" style="display: none;"  >Next Level</button> 
+   <audio id="ad" src="audio/win.mp3"></audio>
+   <audio id="ad2" src="audio/lose.mp3" ></audio>
+</center>
+    <script type="text/javascript">
+    	var imgobj=document.getElementById("myimg");
+	    var t1;
+	    
+	 
+	               
+	    function Fout(){
+	        
+	        imgobj.style.opacity="1.0";
+	        var opin=1.0;
+	        
+	        t2=setInterval(function(){
+	            if(opin==(-0.09999999999999987))
+	                {
+	                    
+	                    clearInterval(t2);
+	                    howmany();
+	                }
+	            else{
+	                
+	                imgobj.style.opacity=opin+"";
+	                opin-=0.1;
+	                
+	            }
+	        },200)
+
+             
+	        }
+	        function howmany() {
+	        	var y= prompt("How Many Cats Are there in The picture ?");
+	        	 if (y==8)
+	        	  {
+	        	  	document.getElementById("ad").autoplay = "autoplay";
+	        	  	document.getElementById("p1").innerHTML = "YOU WIN";
+	        	  	document.getElementById("p2").innerHTML = "Your Score : 10";
+	        	  	document.getElementById("myimg").style.display="none";
+	        	  	document.getElementById("win").style.display="block";
+                    document.getElementById("b1").style.display="block";
+                    document.getElementById("b2").style.display="none";
+                    document.getElementById("b1").onclick =function () {
+                    	location.href='play2.html';
+                    } 
+
+	        	 }
+	        	 else
+	        	 {
+	        	 	document.getElementById("ad2").autoplay = "autoplay";
+	        	 	document.getElementById("p1").innerHTML = "Try Again";
+	        	 	document.getElementById("myimg").style.display="none";
+	        	 	document.getElementById("lose").style.display="block";
+	        	 	document.getElementById("b2").onclick =function () {
+                    	location.href='play.html';
+                    } 
+	        	 	
+	        	 }
+	        }
+	         
+	        
+    
+    
+    </script>
+
+</body>
+</html>
